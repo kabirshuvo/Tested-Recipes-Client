@@ -15,13 +15,18 @@ function App() {
       <Container>
         <Row>
         <LoginWith></LoginWith>
+        </Row>
+        <Row>
+       
           <HeroSection></HeroSection>
         </Row>
-        <Row>
-          <PopulerChefs></PopulerChefs>
-        </Row>
+        
         <Row>
           <PopularRecipes></PopularRecipes>
+        </Row>
+
+        <Row>
+          <PopulerChefs></PopulerChefs>
         </Row>
 
       </Container>
