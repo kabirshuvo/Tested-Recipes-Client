@@ -5,11 +5,12 @@ import {
     Nav,
     Navbar
 } from "react-bootstrap";
+import { FaBeer } from 'react-icons/fa';
 
 const NavBar = () => {
   return (
     <>
-      <Navbar className="container" bg="light" expand="lg">
+      <Navbar className="container-lg" bg="light" expand="lg">
         <Container fluid>
           <Navbar.Brand href="#">Tested Recipes</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -19,12 +20,12 @@ const NavBar = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Foods</Nav.Link>
-              <Nav.Link href="#action1">Chefs</Nav.Link>
-              <Nav.Link href="#action1">Recipes</Nav.Link>
-              <Nav.Link href="#action1">Download</Nav.Link>
-              <Nav.Link href="#action1">Contacts</Nav.Link>
-              <Nav.Link href="#action2">Blog</Nav.Link>
+              <Nav.Link >Chefs</Nav.Link>
+              <Nav.Link >Foods</Nav.Link>
+              <Nav.Link >Recipes</Nav.Link>
+              <Nav.Link >Download</Nav.Link>
+              <Nav.Link >Contacts</Nav.Link>
+              <Nav.Link >Blog</Nav.Link>
               
             </Nav>
             <Form className="d-flex">
@@ -36,6 +37,11 @@ const NavBar = () => {
               />
               <Button variant="outline-success">Search</Button>
             </Form>
+            <>
+            <FaBeer></FaBeer>
+            <img src="" alt="userImage" />
+            <Button>Login</Button>
+            </>
           </Navbar.Collapse>
         </Container>
       </Navbar>

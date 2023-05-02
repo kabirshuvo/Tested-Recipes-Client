@@ -1,18 +1,21 @@
 import { Container, Row } from "react-bootstrap";
-import NavBar from "../components/Navbar/Navbar";
+import Header from "../components/Header/Header";
 import Footer from "../pages/Footer/Footer";
-import Header from "../pages/Header/Header";
+import HeroSection from "../pages/HeroSection/HeroSection";
 import PopularRecipes from "../pages/PopularRecipes/PopularRecipes";
 import PopulerChefs from "../pages/PopulerChefs/PopulerChefs";
+import LoginWith from "../pages/loginWith/LoginWith";
 
 function App() {
   return (
     <>
-      <NavBar></NavBar>
+     <Header></Header>
+     
 
       <Container>
         <Row>
-          <Header></Header>
+        <LoginWith></LoginWith>
+          <HeroSection></HeroSection>
         </Row>
         <Row>
           <PopulerChefs></PopulerChefs>
@@ -20,6 +23,7 @@ function App() {
         <Row>
           <PopularRecipes></PopularRecipes>
         </Row>
+
       </Container>
 
       <Footer></Footer>
