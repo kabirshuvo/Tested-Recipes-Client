@@ -1,10 +1,28 @@
-import React from 'react';
+import { useEffect, useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import FoodsCard from "../../components/FoodsCard/FoodsCard";
+
 
 const Foods = () => {
+    const [foods, setFoods] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/foods`)
+      .then((res) => res.json())
+      .then((data) => setFoods(data))
+      .catch((error) => console.log(error));
+  }, []);
     return (
-        <div>
-            <h3>Foods Page Comming Soon</h3>
-        </div>
+        <Container fluid>
+        <h3>All Foods</h3>
+        <Row xs={1} md={2} lg={3}>
+          {foods.map((food) => (
+            <Col key={food.id}>
+              <FoodsCard food={food}></FoodsCard>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     );
 };
 
