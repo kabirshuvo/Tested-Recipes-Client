@@ -1,18 +1,19 @@
 import {
-    Button,
-    Container,
-    Form,
-    Nav,
-    Navbar
+  Button,
+  Container,
+  Form,
+  Nav,
+  Navbar
 } from "react-bootstrap";
 import { FaBeer } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <>
       <Navbar className="container-lg" bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#">Tested Recipes</Navbar.Brand>
+          <Navbar.Brand><Link style={{textDecoration: 'none', color:'rebeccapurple', padding: '1rem', fontSize: '2rem'}} to={'/'}>Tested Recipes</Link></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -20,12 +21,12 @@ const NavBar = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link >Chefs</Nav.Link>
-              <Nav.Link >Foods</Nav.Link>
-              <Nav.Link >Recipes</Nav.Link>
-              <Nav.Link >Download</Nav.Link>
-              <Nav.Link >Contacts</Nav.Link>
-              <Nav.Link >Blog</Nav.Link>
+              <Link style={{textDecoration: 'none', color:'rebeccapurple', padding: '.7rem'}} to={'/chefs'}>Chefs</Link>
+              <Link style={{textDecoration: 'none', color:'rebeccapurple', padding: '.7rem'}}  to={'/foods'}>Foods</Link>
+              <Link style={{textDecoration: 'none', color:'rebeccapurple', padding: '.7rem'}} to={'/recipes'}>Recipes</Link>
+              <Link style={{textDecoration: 'none', color:'rebeccapurple', padding: '.7rem'}} to={'/download'}>Download</Link>
+              <Link style={{textDecoration: 'none', color:'rebeccapurple', padding: '.7rem'}} to={'/contacts'}>Contacts</Link>
+              <Link style={{textDecoration: 'none', color:'rebeccapurple', padding: '.7rem'}} to={'/blog'}>Blog</Link>
               
             </Nav>
             <Form className="d-flex">

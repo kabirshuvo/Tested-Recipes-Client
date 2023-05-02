@@ -1,4 +1,5 @@
 import { Container, Row } from "react-bootstrap";
+import { Outlet } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Footer from "../pages/Footer/Footer";
 import HeroSection from "../pages/HeroSection/HeroSection";
@@ -16,18 +17,12 @@ function App() {
         <Row>
         <LoginWith></LoginWith>
         </Row>
-        <Row>
-       
-          <HeroSection></HeroSection>
-        </Row>
+      
         
         <Row>
-          <PopularRecipes></PopularRecipes>
+        <Outlet></Outlet>
         </Row>
 
-        <Row>
-          <PopulerChefs></PopulerChefs>
-        </Row>
 
       </Container>
 

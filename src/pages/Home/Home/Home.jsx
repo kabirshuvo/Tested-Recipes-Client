@@ -1,9 +1,14 @@
+import HeroSection from "../../HeroSection/HeroSection";
+import PopularRecipes from "../../PopularRecipes/PopularRecipes";
+import PopulerChefs from "../../PopulerChefs/PopulerChefs";
 
 
 const Home = () => {
     return (
         <div>
-            <h3>This is Home Page</h3>
+        <HeroSection></HeroSection>
+        <PopularRecipes></PopularRecipes>
+        <PopulerChefs></PopulerChefs>
         </div>
     );
 };
