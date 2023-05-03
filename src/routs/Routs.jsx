@@ -12,6 +12,7 @@ import Login from "../pages/Login/Login";
 import Recipes from "../pages/Recipes/Recipes";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./privateRoute";
+import TermsNcons from "../components/termsNcons/termsNcons";
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
         element: <Register></Register>
        
       },
+      {
+        path: 'terms',
+        element: <TermsNcons></TermsNcons>
+      }
     ],
   },
 ]);
