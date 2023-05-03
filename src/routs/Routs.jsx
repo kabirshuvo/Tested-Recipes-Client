@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
+import ChefDetails from "../components/ChefDetails/ChefDetails";
 import NotFound from "../components/NotFound/NotFound";
+import TermsNcons from "../components/termsNcons/termsNcons";
 import App from "../layout/App";
+import BengalFoods from "../pages/BengalFoods/BengalFoods";
 import Blog from "../pages/Blog/Blog";
 import CategorisedRecipes from "../pages/CategorisedRecipes/CategorisedRecipes";
 import Chefs from "../pages/Chefs/Chefs";
@@ -12,7 +15,6 @@ import Login from "../pages/Login/Login";
 import Recipes from "../pages/Recipes/Recipes";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./privateRoute";
-import TermsNcons from "../components/termsNcons/termsNcons";
 
 const router = createBrowserRouter([
   {
@@ -30,8 +32,17 @@ const router = createBrowserRouter([
         element: <Blog></Blog>,
       },
       {
+        path: "/bengalfoods",
+        element: <BengalFoods></BengalFoods>
+      },
+      {
         path: "/chefs",
         element: <Chefs></Chefs>,
+      },
+      {
+        path: '/chefs/:id',
+        element:<ChefDetails></ChefDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`)
       },
       {
         path: "/foods",
@@ -44,7 +55,7 @@ const router = createBrowserRouter([
       {
         path: "/recipes/:id",
         element: <PrivateRoute><CategorisedRecipes></CategorisedRecipes></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/recipes/${params.id}`)
+        loader: ({params}) => fetch(`https://tested-recipes-server-kabirshuvo.vercel.app/recipes/${params.id}`)
       },
       {
         path: "/download",
