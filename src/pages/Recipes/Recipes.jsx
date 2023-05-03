@@ -1,9 +1,10 @@
 
 
 const Recipes = () => {
+     
     return (
         <div>
-            <h3>Recipes Page comming soon</h3>
+            <h3>Recipes Page comming soon </h3>
         </div>
     );
 };

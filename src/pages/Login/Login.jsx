@@ -1,6 +1,5 @@
-
-import { Button, Container } from "react-bootstrap";
-import { Form, Link } from "react-router-dom";
+import { Button, Container, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -35,7 +34,7 @@ const Login = () => {
           </Button>
           <br />
           <Form.Text className="text-secondary">
-            Dont Have an Account? <Link to="/register">Register</Link>
+            New User Registration <Link to="/register">Register</Link>
           </Form.Text>
           <Form.Text className="text-success"></Form.Text>
           <Form.Text className="text-danger"></Form.Text>

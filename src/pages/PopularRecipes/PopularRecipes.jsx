@@ -29,7 +29,7 @@ const PopularRecipes = () => {
                 style={{ width: "100%", marginBottom: "1rem" }}
                 className="recipe-card"
               >
-                <Link to={`/recipe/${recipe.id}`}>
+                <Link to={`/recipes/${recipe.id}`}>
                   <Card.Img
                     variant="top"
                     src={recipe.image}

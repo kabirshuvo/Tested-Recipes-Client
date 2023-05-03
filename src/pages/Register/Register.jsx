@@ -1,13 +1,12 @@
+import { Button, Container, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-import { Button, Container } from "react-bootstrap";
-import { Form, Link } from "react-router-dom";
-
-const Registration = () => {
+const Register = () => {
   return (
     <>
       <Container className="w-25 mx-auto">
         <h3>Please Register</h3>
-        <Form 
+        <Form
         // onSubmit={handleRegister}
         >
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -50,7 +49,7 @@ const Registration = () => {
 
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Check
-            //   onClick={handleAccepted}
+              //   onClick={handleAccepted}
               type="checkbox"
               name="accept"
               label={
@@ -60,10 +59,11 @@ const Registration = () => {
               }
             />
           </Form.Group>
-          <Button 
-          variant="primary" 
-        //   disabled={!accepted} 
-          type="submit">
+          <Button
+            variant="primary"
+            //   disabled={!accepted}
+            type="submit"
+          >
             Register
           </Button>
           <br />
@@ -78,4 +78,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default Register;

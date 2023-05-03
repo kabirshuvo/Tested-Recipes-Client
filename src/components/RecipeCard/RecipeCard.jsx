@@ -1,11 +1,16 @@
 
-import { useParams } from 'react-router-dom';
 
-const RecipeCard = () => {
-    const {id} = useParams();
+const RecipeCard = ({recipe}) => {
+
+    const {id, name, image, description, category, } = recipe;
+   
     return (
         <div>
-            Recipe Card...id No: {id}
+            <h3>{name}</h3> 
+            <p>{description}</p>
+            <h6>{category}</h6>
+            <img src={image} alt="" />
+            
         </div>
     );
 };
