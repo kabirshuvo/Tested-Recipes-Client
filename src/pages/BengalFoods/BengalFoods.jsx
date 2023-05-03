@@ -13,11 +13,11 @@ const BengalFoods = () => {
   });
   return (
     <div>
-      <h3>Bengal Food is comming</h3>
+     
       <Container fluid>
         <h3>Popular Bengal Foods are Here</h3>
 
-        <Row xs={1} md={2} lg={4}>
+        <Row xs={1} md={2} lg={3}>
             
             {bengalFoods.map((bFood) => (
                 <Col key={bFood.id}>
