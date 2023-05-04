@@ -13,7 +13,7 @@ const ChefCard = ({ chef }) => {
             <h3>Speciality: {specialty}</h3>
             <img style={{ width: '100%', height:'19rem' }} src={image} alt="" />
             <h6>{experience} of Experience</h6>
-            <Button>Get a schedule</Button>
+            <Link to={`/chefs/${id}`}><Button>Get a schedule</Button></Link>
           </Card>
         </Col>
       </Row>

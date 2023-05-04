@@ -7,7 +7,7 @@ const IndividualRecipes = () => {
 
    const individualChefsRecipes = useLoaderData();
 
-    console.log(individualChefsRecipes)
+    
 
     
 
