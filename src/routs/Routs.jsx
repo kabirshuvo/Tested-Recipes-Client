@@ -4,6 +4,7 @@ import NotFound from "../components/NotFound/NotFound";
 import SelectedBengalFood from "../components/SelectedBengalFood/SelectedBengalFood";
 import TermsNcons from "../components/termsNcons/termsNcons";
 import App from "../layout/App";
+import BengalChefs from "../pages/BengalChefs/BengalChefs";
 import BengalFoods from "../pages/BengalFoods/BengalFoods";
 import Blog from "../pages/Blog/Blog";
 import CategorisedRecipes from "../pages/CategorisedRecipes/CategorisedRecipes";
@@ -12,6 +13,7 @@ import Contacts from "../pages/Contacts/Contacts";
 import DownLoad from "../pages/Download/DownLoad";
 import Foods from "../pages/Foods/Foods";
 import Home from "../pages/Home/Home/Home";
+import IndividualRecipes from "../pages/IndividualRecipes/IndividualRecipes";
 import Login from "../pages/Login/Login";
 import Recipes from "../pages/Recipes/Recipes";
 import Register from "../pages/Register/Register";
@@ -40,6 +42,15 @@ const router = createBrowserRouter([
         path: "/bengalfoods/:id",
         element: <SelectedBengalFood></SelectedBengalFood>,
         loader: ({params}) => fetch(`http://localhost:5000/bengalfoods/${params.id}`)
+      },
+      {
+        path: '/bengalchefs',
+        element: <BengalChefs></BengalChefs>
+      },
+      {
+        path: '/bengalchefs/:id',
+        element: <IndividualRecipes></IndividualRecipes>,
+        loader: ({params}) => fetch(`http://localhost:5000/bengalchefs/${params.id}`)
       },
       {
         path: "/chefs",

@@ -1,3 +1,4 @@
+import BengalChefs from "../../BengalChefs/BengalChefs";
 import BengalFoods from "../../BengalFoods/BengalFoods";
 import HeroSection from "../../HeroSection/HeroSection";
 import PopularRecipes from "../../PopularRecipes/PopularRecipes";
@@ -9,6 +10,7 @@ const Home = () => {
         <div>
         <HeroSection></HeroSection>
         <BengalFoods></BengalFoods>
+        <BengalChefs></BengalChefs>
         <PopularRecipes></PopularRecipes>
         <PopulerChefs></PopulerChefs>
         </div>
