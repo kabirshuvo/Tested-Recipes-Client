@@ -1,9 +1,9 @@
-import React from 'react';
+
 import { Button, ButtonGroup } from 'react-bootstrap';
 import { FaFacebook, FaGithub, FaGoogle, FaGooglePlus, FaPepperHot } from 'react-icons/fa';
 const LoginWith = () => {
     return (
-        <div style={{ display: "flex", alignItems: "center", justifyContent: 'space-between' }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: 'space-between', }}>
             <div>
                 <FaPepperHot></FaPepperHot>
             </div>
