@@ -12,8 +12,8 @@ const PopularRecipes = () => {
       .catch((error) => console.log(error));
   }, []);
   return (
-    <Container>
-      <h3 className="text-center">Categorized Recipes are here</h3>
+    <Container className="my-5">
+      <h3 className="text-center my-5">Categorized Recipes are here</h3>
       <div className="photo-frame">
         <Row
           style={{

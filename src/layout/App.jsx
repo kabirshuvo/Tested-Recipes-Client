@@ -16,9 +16,7 @@ function App() {
      
 
       <Container>
-        <Row>
-        <LoginWith></LoginWith>
-        </Row>
+        
       
         
         <Row>

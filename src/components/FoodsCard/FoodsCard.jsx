@@ -1,13 +1,17 @@
+import { Card } from "react-bootstrap";
 
 
 const FoodsCard = ({food}) => {
 
-    const {id, name} = food;
+    const { name, image, description, category} = food;
     return (
         <div>
-            <h3>Foods Card {id}</h3>
-
-            <p>{name}</p>
+            <Card>
+                <Card.Header>{name}</Card.Header>
+                <Card.Img> <img src={image}  /></Card.Img>
+                <Card.Body>{description}</Card.Body>
+                <Card.Footer>{category}</Card.Footer>
+            </Card>
 
 
         </div>

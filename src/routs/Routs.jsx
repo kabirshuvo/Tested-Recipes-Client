@@ -4,6 +4,7 @@ import NotFound from "../components/NotFound/NotFound";
 import SelectedBengalFood from "../components/SelectedBengalFood/SelectedBengalFood";
 import TermsNcons from "../components/termsNcons/termsNcons";
 import App from "../layout/App";
+import BanglarChef from "../layout/BanglarChef/BanglarChef";
 import BengalChefs from "../pages/BengalChefs/BengalChefs";
 import BengalFoods from "../pages/BengalFoods/BengalFoods";
 import Blog from "../pages/Blog/Blog";
@@ -40,26 +41,18 @@ const router = createBrowserRouter([
       },
       {
         path: "/bengalfoods/:id",
-        element: <SelectedBengalFood></SelectedBengalFood>,
-        loader: ({params}) => fetch(`http://localhost:5000/bengalfoods/${params.id}`)
+        element: <PrivateRoute><SelectedBengalFood></SelectedBengalFood></PrivateRoute>,
+        loader: ({params}) => fetch(`https://tested-recipes-server-kabirshuvo.vercel.app/bengalfoods/${params.id}`)
       },
-      {
-        path: '/bengalchefs',
-        element: <BengalChefs></BengalChefs>
-      },
-      {
-        path: '/bengalchefs/:id',
-        element: <IndividualRecipes></IndividualRecipes>,
-        loader: ({params}) => fetch(`http://localhost:5000/bengalchefs/${params.id}`)
-      },
+      
       {
         path: "/chefs",
         element: <Chefs></Chefs>,
       },
       {
         path: '/chefs/:id',
-        element:<ChefDetails></ChefDetails>,
-        loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`)
+        element:<PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
+        loader: ({params}) => fetch(`https://tested-recipes-server-kabirshuvo.vercel.app/chefs/${params.id}`)
       },
       {
         path: "/foods",
@@ -99,6 +92,23 @@ const router = createBrowserRouter([
       }
     ],
   },
+  {
+    path: '/banglarchef',
+    element: <BanglarChef></BanglarChef>,
+    children: [
+      {
+        path: 'bengalchefs',
+        element: <BengalChefs></BengalChefs>
+      },
+      {
+        path: 'bengalchefs/:id',
+        element: <PrivateRoute><IndividualRecipes></IndividualRecipes></PrivateRoute> ,
+        loader: ({params}) => fetch(`https://tested-recipes-server-kabirshuvo.vercel.app/bengalchefs/${params.id}`)
+      },
+     
+    ]
+
+  }
 ]);
 
 export default router;

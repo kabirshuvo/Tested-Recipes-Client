@@ -11,8 +11,8 @@ const PopulerChefs = () => {
       .catch((error) => console.log(error));
   }, []);
   return (
-    <Container fluid>
-      <h3>Popular Chefs are here</h3>
+    <Container className="my-5" fluid>
+      <h3 className="my-5 text-center bold">Popular Chefs are here</h3>
       <Row xs={1} md={2} lg={4}>
         {chefs.map((chef) => (
           <Col key={chef.id}>

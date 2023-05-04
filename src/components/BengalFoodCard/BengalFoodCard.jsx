@@ -3,7 +3,7 @@ import { Link, } from 'react-router-dom';
 
 const BengalFoodCard = ({ bFood }) => {
   
-  const { id, category, description, image, name } = bFood;
+  const {cookingMethod,rating, id, category, description, image, name, ingredients, price  } = bFood;
 
   const renderTooltip = () => (
     <Tooltip id={`tooltip-${id}`}>{name}</Tooltip>
@@ -29,7 +29,7 @@ const BengalFoodCard = ({ bFood }) => {
         <Card.Title>{name}</Card.Title>
         <Card.Text>{description}</Card.Text>
         <Card.Text>{category}</Card.Text>
-        <Card.Text>price: lol</Card.Text>
+        <Card.Text>price: {price}</Card.Text>
         <small style={{ fontSize: "12px" }}>Order Id: {id}</small>
       </Card.Body>
       <Link to={`/bengalfoods/${id}`}>

@@ -7,7 +7,7 @@ const BengalChefs = () => {
     const [indvRecipes, SetIndvRecipes] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/bengalchefs`)
+        fetch(`https://tested-recipes-server-kabirshuvo.vercel.app/bengalchefs`)
         .then(res => res.json())
         .then(data => SetIndvRecipes(data))
         .catch(error => console.log(error))
@@ -33,7 +33,7 @@ const BengalChefs = () => {
                     Awards: {indvrecipe.awards.join(', ')}
                   </Card.Text>
                 </Card.Body>
-                <Link to={`/bengalchefs/${indvrecipe.id}`}><Button style={{width: '100%'}}>View Recipes</Button></Link>
+                <Link to={`/banglarchef/bengalchefs/${indvrecipe.id}`}><Button style={{width: '100%'}}>View Recipes</Button></Link>
               </Card>
             </Col>
           ))}

@@ -5,8 +5,10 @@ import BengalFoodCard from "../../components/BengalFoodCard/BengalFoodCard";
 const BengalFoods = () => {
   const [bengalFoods, setBengalFoods] = useState([]);
 
+ 
+
   useEffect(() => {
-    fetch(`http://localhost:5000/bengalFoods`)
+    fetch(`https://tested-recipes-server-kabirshuvo.vercel.app/bengalFoods`)
       .then((res) => res.json())
       .then((data) => setBengalFoods(data))
       .catch((error) => console.log(error));
