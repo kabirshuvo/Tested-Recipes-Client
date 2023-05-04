@@ -7,6 +7,9 @@ const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [accepted, setAccepted] = useState(false);
 
+  const [error, setError] = useState('');
+  // const [success, setSuccess] = useState('');
+
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -14,6 +17,11 @@ const Register = () => {
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
+
+    if(!/^(?=.*[A-Z]).+$/.test(password)){
+      setError('please Use At Least One UpperCase.')
+      return
+    }
 
     console.log(name, photo, email, password);
 
@@ -93,6 +101,7 @@ const Register = () => {
             Register
           </Button>
           <br />
+          <p>{error}</p>
           <Form.Text className="text-secondary">
             Already Have an Account? <Link to="/login">Login</Link>
           </Form.Text>
