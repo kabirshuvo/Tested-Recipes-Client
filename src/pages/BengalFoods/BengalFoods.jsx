@@ -15,12 +15,12 @@ const BengalFoods = () => {
     <div>
      
       <Container fluid>
-        <h3>Popular Bengal Foods are Here</h3>
+        <h3 className="text-center p-4">Popular Bengal Foods are Here</h3>
 
-        <Row xs={1} md={2} lg={3}>
+        <Row  xs={1} md={2} lg={3}>
             
             {bengalFoods.map((bFood) => (
-                <Col key={bFood.id}>
+                <Col className="py-2" key={bFood.id}>
                     <BengalFoodCard bFood={bFood}></BengalFoodCard>
                 </Col>
             ))}
@@ -34,13 +34,4 @@ const BengalFoods = () => {
 
 export default BengalFoods;
 
-// <Container fluid>
-//       <h3>Popular Chefs are here</h3>
-//       <Row xs={1} md={2} lg={4}>
-//         {chefs.map((chef) => (
-//           <Col key={chef.id}>
-//             <ChefCard chef={chef} />
-//           </Col>
-//         ))}
-//       </Row>
-//     </Container>
+

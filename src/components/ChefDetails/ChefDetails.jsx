@@ -21,12 +21,3 @@ const ChefDetails = () => {
 
 export default ChefDetails;
 
-// const categorisedRecipes = useLoaderData();
-// return (
-//     <div>
-//        numbers of Recipes Abailable: {categorisedRecipes.length}
-// {
-// categorisedRecipes.map(recipe => <RecipeCard key={recipe.id} recipe={recipe}></RecipeCard>)
-// }
-//     </div>
-// );

@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import ChefDetails from "../components/ChefDetails/ChefDetails";
 import NotFound from "../components/NotFound/NotFound";
+import SelectedBengalFood from "../components/SelectedBengalFood/SelectedBengalFood";
 import TermsNcons from "../components/termsNcons/termsNcons";
 import App from "../layout/App";
 import BengalFoods from "../pages/BengalFoods/BengalFoods";
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
       {
         path: "/bengalfoods",
         element: <BengalFoods></BengalFoods>
+      },
+      {
+        path: "/bengalfoods/:id",
+        element: <SelectedBengalFood></SelectedBengalFood>,
+        loader: ({params}) => fetch(`http://localhost:5000/bengalfoods/${params.id}`)
       },
       {
         path: "/chefs",

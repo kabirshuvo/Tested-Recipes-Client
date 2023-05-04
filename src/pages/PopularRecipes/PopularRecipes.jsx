@@ -13,7 +13,7 @@ const PopularRecipes = () => {
   }, []);
   return (
     <Container>
-      <h3>Categorized Recipes are here</h3>
+      <h3 className="text-center">Categorized Recipes are here</h3>
       <div className="photo-frame">
         <Row
           style={{
