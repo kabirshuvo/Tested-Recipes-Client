@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ChefCard from "../../components/ChefCard/ChefCard";
+import useTitle from "../../hooks/useTitle";
 
 const PopulerChefs = () => {
   const [chefs, setChefs] = useState([]);
+  useTitle('Popular Chefs');
   useEffect(() => {
     fetch(`https://tested-recipes-server-kabirshuvo.vercel.app/chefs`)
       .then((res) => res.json())

@@ -1,3 +1,4 @@
+import useTitle from "../../../hooks/useTitle";
 import BengalChefs from "../../BengalChefs/BengalChefs";
 import BengalFoods from "../../BengalFoods/BengalFoods";
 import HeroSection from "../../HeroSection/HeroSection";
@@ -6,6 +7,7 @@ import PopulerChefs from "../../PopulerChefs/PopulerChefs";
 
 
 const Home = () => {
+    useTitle('Home');
     return (
         <div>
         <HeroSection></HeroSection>

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import FoodsCard from "../../components/FoodsCard/FoodsCard";
+import useTitle from "../../hooks/useTitle";
 
 const Recipes = () => {
     const [foods, setFoods] = useState([]);
-
+useTitle('Recipes')
   useEffect(() => {
     fetch(`https://tested-recipes-server-kabirshuvo.vercel.app/foods`)
       .then((res) => res.json())

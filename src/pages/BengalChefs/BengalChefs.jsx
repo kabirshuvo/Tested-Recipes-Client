@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 
 const BengalChefs = () => {
     const [indvRecipes, SetIndvRecipes] = useState([]);
-
+useTitle('BengalChefs')
     useEffect(() => {
         fetch(`https://tested-recipes-server-kabirshuvo.vercel.app/bengalchefs`)
         .then(res => res.json())

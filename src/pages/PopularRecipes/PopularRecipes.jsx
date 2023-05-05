@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const PopularRecipes = () => {
   const [recipes, setRecipes] = useState([]);
-
+useTitle('Popular Recipes')
   useEffect(() => {
     fetch(`https://tested-recipes-server-kabirshuvo.vercel.app/recipes`)
       .then((res) => res.json())

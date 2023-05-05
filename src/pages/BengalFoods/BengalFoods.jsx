@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import BengalFoodCard from "../../components/BengalFoodCard/BengalFoodCard";
+import useTitle from "../../hooks/useTitle";
 
 const BengalFoods = () => {
   const [bengalFoods, setBengalFoods] = useState([]);
-
+useTitle('BengalFoods')
  
 
   useEffect(() => {

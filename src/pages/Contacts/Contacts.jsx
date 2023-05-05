@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
+import useTitle from '../../hooks/useTitle';
 
 const ContactForm = () => {
+useTitle('Contacts');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');

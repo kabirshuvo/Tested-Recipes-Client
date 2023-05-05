@@ -1,9 +1,11 @@
 
 import { useLoaderData } from 'react-router-dom';
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
+import useTitle from '../../hooks/useTitle';
 
 const CategorisedRecipes = () => {
     // const {id} = useParams();
+   useTitle('Categorised Recipes')
     const categorisedRecipes = useLoaderData();
     return (
         <div>

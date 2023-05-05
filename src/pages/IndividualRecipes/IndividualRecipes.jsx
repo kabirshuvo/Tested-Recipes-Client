@@ -1,9 +1,12 @@
 
 import { useLoaderData } from "react-router-dom";
 import BengalIndvRecipesCard from "../../components/bengalIndvRecipesCard/bengalIndvRecipesCard";
+import useTitle from "../../hooks/useTitle";
 
 
 const IndividualRecipes = () => {
+
+    useTitle('IndividualRecipes')
 
    const individualChefsRecipes = useLoaderData();
 

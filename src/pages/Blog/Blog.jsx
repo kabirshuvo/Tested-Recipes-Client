@@ -1,7 +1,11 @@
 import { Card } from "react-bootstrap";
+import useTitle from "../../hooks/useTitle";
 
 
 const Blog = () => {
+   
+
+    useTitle('Blog')
     return (
         <div  className="text-center">
             <Card >
@@ -32,7 +36,7 @@ const Blog = () => {
             <Card>
             <Card.Header style={{fontSize: '1.5rem', font: 'bold', padding:'1rem', margin: '1rem'}}>What is a Custom hook? Why to create a custom hook?</Card.Header>
             <Card.Text style={{fontSize: '1rem', font: 'bold', padding:'1rem', margin: '1rem'}}>A custom hook is a JavaScript function that allows us to reuse stateful logic in functional components in React. It enables us to extract common logic from components and share it across different parts of your application.</Card.Text>
-            <Card.Text style={{fontSize: '1rem', font: 'bold', padding:'1rem', margin: '1rem'}}>By creating custom hooks, you can improve the reusability, abstraction, organization, and testability of your code, leading to cleaner, more maintainable, and scalable React applications.</Card.Text>
+            <Card.Text style={{fontSize: '1rem', font: 'bold', padding:'1rem', margin: '1rem'}}>By creating custom hooks, I would like to improve my codes reusability, abstraction, organization, and testability, leading to cleaner, more maintainable, and scalable React applications.</Card.Text>
             </Card>
         </div>
     );
